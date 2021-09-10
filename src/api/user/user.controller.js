@@ -3,7 +3,7 @@ import service from './user.service';
 
 const getUserInfo = async (req, res, next) => {
   try {
-    const { id = null } = req.query;
+    const { id } = req.query;
     const result = await service.getUserInfo(id);
 
     return result
@@ -16,7 +16,7 @@ const getUserInfo = async (req, res, next) => {
 
 const editUserName = async (req, res, next) => {
   try {
-    const { id = null } = req.query;
+    const { id } = req.query;
     const { newName = null } = req.body;
 
     const result = await service.editUserName(id, newName);
