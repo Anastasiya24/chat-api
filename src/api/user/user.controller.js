@@ -1,10 +1,10 @@
 import status from 'http-status';
 import service from './user.service';
 
-const getUserName = async (req, res, next) => {
+const getUserInfo = async (req, res, next) => {
   try {
     const { id = null } = req.query;
-    const result = await service.getUserName(id);
+    const result = await service.getUserInfo(id);
 
     return result
       ? res.status(status.OK).json(result)
@@ -30,6 +30,6 @@ const editUserName = async (req, res, next) => {
 };
 
 export default {
-  getUserName,
+  getUserInfo,
   editUserName,
 };

@@ -1,6 +1,6 @@
-async function getUserName(id) {
+async function getUserInfo(id) {
   // TODO find by id
-  return 'Nastya';
+  return { id: '1', name: 'Nastya' };
 }
 
 async function editUserName(id, newName) {
@@ -9,6 +9,6 @@ async function editUserName(id, newName) {
 }
 
 export default {
-  getUserName,
+  getUserInfo,
   editUserName,
 };
