@@ -17,7 +17,7 @@ const getUserName = async (req, res, next) => {
 const editUserName = async (req, res, next) => {
   try {
     const { id = null } = req.query;
-    const { newName } = req.body;
+    const { newName = null } = req.body;
 
     const result = await service.editUserName(id, newName);
 
