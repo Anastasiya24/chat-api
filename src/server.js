@@ -3,10 +3,6 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-// TODO for get user name
-// import cookieParser from 'cookie-parser';
-// TODO init db
-// import initializeDb from './services/db';
 import routes from './routes';
 
 dotenv.config();

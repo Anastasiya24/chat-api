@@ -5,7 +5,7 @@ async function getUserInfo(id) {
     let user = await User.findById(id);
     return user;
   }
-  return { _id: '', name: '' };
+  return { id: '', name: '' };
 }
 
 async function editUserName(id, newName) {
@@ -18,7 +18,7 @@ async function editUserName(id, newName) {
     );
     return { id, name: newName };
   } else {
-    const user = await User({
+    const user = new User({
       name: newName,
     });
     const info = await user.save();

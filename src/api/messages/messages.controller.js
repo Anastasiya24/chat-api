@@ -16,10 +16,9 @@ const getMessagesList = async (req, res, next) => {
 
 const addNewMessage = async (req, res, next) => {
   try {
-    const { id = null } = req.query;
     const { message } = req.body;
 
-    const result = await service.addNewMessage(id, message);
+    const result = await service.addNewMessage(message);
 
     return result
       ? res.status(status.OK).json(result)
